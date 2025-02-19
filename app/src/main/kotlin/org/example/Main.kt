@@ -1,7 +1,15 @@
 package org.example
 
-fun main() {
-    val list = listOf(1, 2, 3)
+fun parsePath(path: String) {
+    val  directory = path.substringBeforeLast("/")
+    val fullName = path.substringAfterLast("/")
 
-    println(list)
+    val fileName = fullName.substringBeforeLast(".")
+    val extension = fullName.substringAfterLast(".")
+
+    println("Dir: $directory, name: $fileName, ext: $extension")
+}
+
+fun main(){
+    parsePath("/Users/yole/chapter.adoc")
 }
