@@ -1,5 +1,7 @@
 package org.example
 
 fun main() {
-    println("Hello world")
+    val list = listOf(1, 2, 3)
+
+    println(list)
 }
